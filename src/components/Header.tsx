@@ -11,7 +11,18 @@ const { Header: AntHeader } = Layout;
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const { scrollY } = useScroll();
+
+    // Detect mobile viewport
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (latest > 50) {
@@ -52,18 +63,9 @@ const Header = () => {
                 height: isScrolled ? '70px' : '90px',
             }}
         >
-            <div style={{
-                maxWidth: '1200px',
-                margin: '0 auto',
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '0 24px', // Add padding here for safe edges
-            }}>
+            <div className="header-container">
                 {/* 1. Logo Section */}
-                <div className="logo" style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', flexShrink: 0 }} onClick={() => scrollToSection('hero')}>
+                <div className="logo header-logo" style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', flexShrink: 0, marginLeft: isMobile ? '0' : '0' }} onClick={() => scrollToSection('hero')}>
                     <Image src="/images/logo_transparente.png" alt="Peacore Logo" width={140} height={40} style={{ objectFit: 'contain' }} />
                 </div>
 
@@ -104,7 +106,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <div className="mobile-menu-btn" style={{ display: 'none', marginLeft: 'auto', marginRight: '10px' }}>
+                <div className="mobile-menu-btn">
                     <Button
                         type="text"
                         icon={<MenuOutlined style={{ fontSize: '24px', color: '#1C30AF' }} />}
