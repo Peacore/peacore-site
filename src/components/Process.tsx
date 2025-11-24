@@ -27,23 +27,22 @@ const Process = () => {
                 <div className="desktop-timeline" style={{ marginBottom: '60px' }}>
                     <Steps
                         current={-1}
-                        titlePlacement="vertical"
                         items={[
                             {
                                 title: 'Escuta Ativa',
-                                content: 'Diagnóstico profundo das dores e objetivos.',
+                                description: 'Diagnóstico profundo das dores e objetivos.',
                             },
                             {
                                 title: 'Design da Solução',
-                                content: 'Proposta estratégica com escopo e investimento.',
+                                description: 'Proposta estratégica com escopo e investimento.',
                             },
                             {
                                 title: 'Contrato e Flexibilidade',
-                                content: 'Formalização com opções de pagamento flexíveis.',
+                                description: 'Formalização com opções de pagamento flexíveis.',
                             },
                             {
                                 title: 'Execução e Validação',
-                                content: 'Desenvolvimento ágil com entregas contínuas.',
+                                description: 'Desenvolvimento ágil com entregas contínuas.',
                             },
                         ]}
                     />
