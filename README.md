@@ -1,44 +1,49 @@
-# Peacore Landing Page
+# Peacore Website
 
-This is the official landing page for Peacore, built with Next.js, TypeScript, and Ant Design.
+Landing page institucional da Peacore - Consultoria de Alta Performance em Tecnologia e Inteligência Artificial.
 
-## Technologies Used
+## 🚀 Tecnologias
 
-- **Next.js 15**: React framework for production.
-- **TypeScript**: Static typing.
-- **Ant Design (AntD)**: UI Component library.
-- **Framer Motion**: Animation library.
+- **Next.js 16** - Framework React com SSR e otimizações automáticas
+- **TypeScript** - Tipagem estática para maior segurança
+- **Ant Design** - Biblioteca de componentes UI
+- **Framer Motion** - Animações fluidas e responsivas
+- **Google Fonts** - Inter e Poppins
 
-## Getting Started
+## 📦 Instalação
 
-1.  **Install dependencies:**
+```bash
+npm install
+```
 
-    ```bash
-    npm install
-    ```
+## 🛠️ Desenvolvimento
 
-2.  **Run the development server:**
+```bash
+npm run dev
+```
 
-    ```bash
-    npm run dev
-    ```
+Acesse [http://localhost:3000](http://localhost:3000)
 
-    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ Build
 
-3.  **Build for production:**
+```bash
+npm run build
+npm start
+```
 
-    ```bash
-    npm run build
-    ```
+## 📋 SEO
 
-## Project Structure
+O projeto está otimizado para SEO com:
+- Meta tags Open Graph e Twitter Cards
+- Sitemap dinâmico
+- robots.txt configurado
+- Metadata estruturada
+- Performance otimizada
 
-- `src/app`: App Router pages and layout.
-- `src/components`: Reusable UI components.
-- `src/theme`: Ant Design theme configuration.
-- `public/images`: Static assets.
+## 🌐 Deploy
 
-## Customization
+O projeto está configurado para deploy na Vercel com região otimizada para o Brasil (São Paulo - gru1).
 
-- **Theme**: Edit `src/theme/themeConfig.ts` to change colors and fonts.
-- **Content**: Edit the respective components in `src/components`.
+---
+
+**Peacore** - Transformamos os Desafios do Seu Negócio com Tecnologia

@@ -19,11 +19,56 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-    title: 'Peacore',
-    description: 'Transformamos os Desafios do Seu Negócio com Tecnologia.',
+    title: 'Peacore - Transformamos os Desafios do Seu Negócio com Tecnologia',
+    description: 'A Peacore é sua Parceira Estratégica em tecnologia e inteligência artificial. Criamos Sistemas Customizados, Fazemos Automações e desenvolvemos soluções inovadoras com IA e Ciência de Dados.',
+    keywords: ['consultoria tecnologia', 'inteligência artificial', 'automação de processos', 'sistemas customizados', 'ciência de dados', 'transformação digital', 'soluções em IA', 'desenvolvimento de software'],
+    authors: [{ name: 'Peacore' }],
+    creator: 'Peacore',
+    publisher: 'Peacore',
     icons: {
         icon: '/images/logo_transparente.png',
+        apple: '/images/logo_transparente.png',
     },
+    metadataBase: new URL('https://peacore.com.br'),
+    openGraph: {
+        type: 'website',
+        locale: 'pt_BR',
+        url: 'https://peacore.com.br',
+        title: 'Peacore - Transformamos os Desafios do Seu Negócio com Tecnologia',
+        description: 'Consultoria de Alta Performance em tecnologia e inteligência artificial. Criamos soluções inovadoras com comunicação clara, focada no seu resultado final.',
+        siteName: 'Peacore',
+        images: [
+            {
+                url: '/images/peacore_transparente.png',
+                width: 1200,
+                height: 630,
+                alt: 'Peacore - Tecnologia e Inteligência Artificial',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Peacore - Transformamos os Desafios do Seu Negócio com Tecnologia',
+        description: 'Consultoria de Alta Performance em tecnologia e inteligência artificial.',
+        images: ['/images/peacore_transparente.png'],
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+};
+
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
