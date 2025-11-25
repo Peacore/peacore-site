@@ -38,7 +38,7 @@ export const metadata = {
         type: 'website',
         locale: 'pt_BR',
         url: 'https://peacore.com.br',
-        title: 'Peacore - Transformamos os Desafios do Seu Negócio com Tecnologia',
+        title: 'Peacore',
         description: 'Consultoria de Alta Performance em tecnologia e inteligência artificial. Criamos soluções inovadoras com comunicação clara, focada no seu resultado final.',
         siteName: 'Peacore',
         images: [
@@ -52,7 +52,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Peacore - Transformamos os Desafios do Seu Negócio com Tecnologia',
+        title: 'Peacore',
         description: 'Consultoria de Alta Performance em tecnologia e inteligência artificial.',
         images: ['/images/peacore_transparente.png'],
     },
