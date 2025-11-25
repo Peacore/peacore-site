@@ -26,8 +26,12 @@ export const metadata = {
     creator: 'Peacore',
     publisher: 'Peacore',
     icons: {
-        icon: '/images/logo_transparente.png',
-        apple: '/images/logo_transparente.png',
+        icon: [
+            { url: '/favicon.png', type: 'image/png' },
+            { url: '/images/logo_transparente.png', type: 'image/png', sizes: 'any' }
+        ],
+        apple: '/apple-touch-icon.png',
+        shortcut: '/favicon.png',
     },
     metadataBase: new URL('https://peacore.com.br'),
     openGraph: {
