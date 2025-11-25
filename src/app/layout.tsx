@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-    title: 'Peacore - Transformamos os Desafios do Seu Negócio com Tecnologia',
+    title: 'Peacore',
     description: 'A Peacore é sua Parceira Estratégica em tecnologia e inteligência artificial. Criamos Sistemas Customizados, Fazemos Automações e desenvolvemos soluções inovadoras com IA e Ciência de Dados.',
     keywords: ['consultoria tecnologia', 'inteligência artificial', 'automação de processos', 'sistemas customizados', 'ciência de dados', 'transformação digital', 'soluções em IA', 'desenvolvimento de software'],
     authors: [{ name: 'Peacore' }],
