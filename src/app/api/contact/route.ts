@@ -26,12 +26,9 @@ export async function POST(request: NextRequest) {
         }
 
         // Enviar email usando Resend
-        // NOTA: No modo de teste do Resend, emails só podem ser enviados
-        // para o email verificado da conta. Para enviar para outros emails,
-        // você precisa verificar um domínio em resend.com/domains
         const data = await resend.emails.send({
-            from: 'Peacore Website <onboarding@resend.dev>',
-            to: ['leofgrupioni@gmail.com'], // Email verificado na conta Resend
+            from: 'Peacore <contato@peacore.com.br>',
+            to: ['contato@peacore.com.br'],
             replyTo: email, // Email do cliente que preencheu o formulário
             subject: `Novo contato de ${name}`,
             html: `
