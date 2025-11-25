@@ -1,6 +1,6 @@
 import React from 'react';
 import { Inter, Poppins } from 'next/font/google';
-import { ConfigProvider } from 'antd';
+import { App, ConfigProvider } from 'antd';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import theme from '@/theme/themeConfig';
 import './globals.css';
@@ -76,7 +76,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         <body className={inter.className}>
             <AntdRegistry>
                 <ConfigProvider theme={theme}>
-                    {children}
+                    <App>
+                        {children}
+                    </App>
                 </ConfigProvider>
             </AntdRegistry>
         </body>

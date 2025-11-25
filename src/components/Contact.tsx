@@ -11,10 +11,34 @@ const { TextArea } = Input;
 const Contact = () => {
     const [form] = Form.useForm();
 
-    const onFinish = (values: { name: string; email: string; phone: string; message: string }) => {
-        console.log('Success:', values);
-        message.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        form.resetFields();
+    const [loading, setLoading] = React.useState(false);
+
+    const onFinish = async (values: { name: string; email: string; phone: string; message: string }) => {
+        setLoading(true);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(values),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                message.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                form.resetFields();
+            } else {
+                message.error(data.error || 'Erro ao enviar mensagem. Por favor, tente novamente.');
+            }
+        } catch (error) {
+            console.error('Erro ao enviar formulário:', error);
+            message.error('Erro ao enviar mensagem. Por favor, tente novamente.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -100,6 +124,7 @@ const Contact = () => {
                                             block
                                             size="large"
                                             icon={<SendOutlined />}
+                                            loading={loading}
                                             style={{ height: '48px', fontWeight: 600 }}
                                         >
                                             Enviar Mensagem
