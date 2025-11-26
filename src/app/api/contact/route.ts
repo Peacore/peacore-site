@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
         // Enviar email usando Resend
         const data = await resend.emails.send({
             from: 'Peacore <contato@peacore.com.br>',
-            to: ['contato@peacore.com.br'],
+            to: ['leonardo.grupioni@peacore.com.br'],
             replyTo: email, // Email do cliente que preencheu o formulário
             subject: `Novo contato de ${name}`,
             html: `
